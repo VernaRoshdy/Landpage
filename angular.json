@@ -30,7 +30,7 @@
                         ],
                         "styles": [
                             "src/styles.scss",
-                            "./node_modules/swiper/swiper-bundle.css",
+
                             "./node_modules/aos/dist/aos.css"
                         ],
                         "scripts": [
@@ -99,7 +99,7 @@
                         ],
                         "styles": [
                             "src/styles.scss",
-                            "./node_modules/swiper/swiper-bundle.css",
+
                             "./node_modules/aos/dist/aos.css"
                         ],
                         "scripts": [
