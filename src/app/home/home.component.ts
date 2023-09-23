@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import * as AOS from 'aos';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class AppComponent implements OnInit {
+export class HomeComponent implements OnInit {
+
   title = 'app';
   ids: Array<String> = ['one', 'two', 'three', 'four']
 constructor(public translate:TranslateService,private router: Router,private route: ActivatedRoute){
@@ -32,6 +34,4 @@ switchLanguage(language: string) {
       if (element) element.scrollIntoView();
     });
     
-  } 
-
-}
+  } }

@@ -1,0 +1,93 @@
+<div [dir]="'dir'|translate" [ngClass]="{'ltr-dir': translate.currentLang=='ar'}">
+
+
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <div class="logo">
+                <h1><a href="index.html"><span><img src="../assets/img/twsel.svg"/></span></a></h1>
+
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <div class="navbar-container container">
+                    <input type="checkbox" name="" id="">
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                    <ul class="menu-items">
+                        <li><a class="nav-link scrollto" routerLink="/content" fragment="contact">{{ 'Contact'|translate}}</a></li>
+                        <li><a class="nav-link scrollto" [routerLink]="['/Careers']" target="_blank">{{ 'Career'|translate}}</a></li>
+                        <li><a class="nav-link scrollto" routerLink="/content" fragment="pricing">{{ 'Pricing'|translate}}</a></li>
+
+                        <li><a class="nav-link scrollto" routerLink="/content" fragment="gallery">{{ 'Gallery'|translate}}</a></li>
+                        <!-- <li><a class="nav-link module" routerLink="/content" fragment="features">{{ 'Features'|translate}}</a></li> -->
+                        <li><a class="nav-link module" routerLink="/content" fragment="about" (click)="forceNavigate('about')">{{ 'About'|translate}}</a></li>
+
+                        <li><a class="nav-link scrollto active" routerLink="/content" fragment="Home" (click)="forceNavigate('Home')">{{ 'Home'|translate}}</a></li>
+
+
+                    </ul>
+                    <div class="select-language-container">
+
+                        <select #langSelect (change)="translate.use(langSelect.value)" class="selectLang">
+                    <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+                  </select>
+                        <img src="../../assets/img/lang.png" class="selectLangicon">
+                    </div>
+
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </div>
+            </nav>
+            <!-- .navbar -->
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <section id="Home">
+
+
+
+    </section>
+    <!-- End Hero -->
+    <form class="container">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label class="mb-3" for="FirstName">{{"First_Name"|translate}}</label>
+                    <input type="text" class="form-control" id="FirstName" aria-describedby="FirstName" [placeholder]="'First_Name' | translate">
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label class="mb-3" for="LastName">{{"Last_Name"|translate}}</label>
+                    <input type="text" class="form-control" id="LastName" aria-describedby="LastName" [placeholder]="'Last_Name' | translate">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="mb-3" for="exampleInputEmail1">{{"Email"|translate}}</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [placeholder]="'Email' | translate">
+
+        </div>
+        <div class="form-group mb-3">
+            <label class="mb-3" for="exampleInputPassword1">{{"Password"|translate}}</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" [placeholder]="'Password' | translate">
+        </div>
+        <div class="form-group mb-3">
+            <label class="mb-3" for="exampleInputPassword1">{{"confirm_Password"}}</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" [placeholder]="'confirm_Password' | translate">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">{{"Upload_ur_CV"}}</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

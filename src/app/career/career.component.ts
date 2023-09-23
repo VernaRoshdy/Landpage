@@ -3,13 +3,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import * as AOS from 'aos';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-career',
+  templateUrl: './career.component.html',
+  styleUrls: ['./career.component.scss']
 })
-export class AppComponent implements OnInit {
+export class CareerComponent implements OnInit {
+
   title = 'app';
-  ids: Array<String> = ['one', 'two', 'three', 'four']
+  
 constructor(public translate:TranslateService,private router: Router,private route: ActivatedRoute){
   translate.addLangs(['en', 'ar']);
   translate.setDefaultLang('en');
@@ -33,5 +34,6 @@ switchLanguage(language: string) {
     });
     
   } 
-
 }
+
+

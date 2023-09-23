@@ -9,10 +9,14 @@ import {  HttpClient, HttpClientModule } from '@angular/common/http';
 import { ViewportScroller } from '@angular/common';
 import { Router, Scroll } from '@angular/router';
 import { filter } from 'rxjs';
+import { CareerComponent } from './career/career.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CareerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
