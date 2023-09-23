@@ -21,14 +21,14 @@
                     </div>
                     <ul class="menu-items">
                         <li><a class="nav-link scrollto" routerLink="/content" fragment="contact">{{ 'Contact'|translate}}</a></li>
-                        <li><a class="nav-link scrollto" [routerLink]="['/Careers']" target="_blank">{{ 'Career'|translate}}</a></li>
+                        <li><a class="nav-link scrollto active" [routerLink]="['/Careers']" target="_blank">{{ 'Career'|translate}}</a></li>
                         <li><a class="nav-link scrollto" routerLink="/content" fragment="pricing">{{ 'Pricing'|translate}}</a></li>
 
                         <li><a class="nav-link scrollto" routerLink="/content" fragment="gallery">{{ 'Gallery'|translate}}</a></li>
                         <!-- <li><a class="nav-link module" routerLink="/content" fragment="features">{{ 'Features'|translate}}</a></li> -->
                         <li><a class="nav-link module" routerLink="/content" fragment="about" (click)="forceNavigate('about')">{{ 'About'|translate}}</a></li>
 
-                        <li><a class="nav-link scrollto active" routerLink="/content" fragment="Home" (click)="forceNavigate('Home')">{{ 'Home'|translate}}</a></li>
+                        <li><a class="nav-link scrollto " routerLink="/content" fragment="Home" (click)="forceNavigate('Home')">{{ 'Home'|translate}}</a></li>
 
 
                     </ul>
