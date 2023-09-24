@@ -20,7 +20,13 @@
                         <span class="line line2"></span>
                         <span class="line line3"></span>
                     </div>
-                    <ul class="menu-items">
+                    <ul class="menu-items flexbox">
+                        <div class="select-language-container">
+                            <select #langSelect (change)="translate.use(langSelect.value)" class="selectLang">
+                        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+                      </select>
+                            <img src="../../assets/img/lang.png" class="selectLangicon">
+                        </div>
                         <li><a class="nav-link scrollto" routerLink="/content" fragment="contact">{{ 'Contact'|translate}}</a></li>
                         <li><a class="nav-link scrollto" [routerLink]="['/Careers']" target="_blank">{{ 'Career'|translate}}</a></li>
                         <li><a class="nav-link scrollto" routerLink="/content" fragment="pricing">{{ 'Pricing'|translate}}</a></li>
@@ -32,12 +38,8 @@
                         <li><a class="nav-link scrollto active" routerLink="/content" fragment="Home" (click)="forceNavigate('Home')">{{ 'Home'|translate}}</a></li>
 
 
+
                     </ul>
-                    <div class="select-language-container">
-                        <select #langSelect (change)="translate.use(langSelect.value)" class="selectLang">
-                    <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
-                  </select>
-                    </div>
 
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </div>
