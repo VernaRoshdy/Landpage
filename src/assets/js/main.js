@@ -57,6 +57,18 @@
     /**
      * Scrolls to an element with header offset
      */
+    document.querySelector("#form-send-message").validate({
+        errorPlacement: function(error, element) {},
+        submitHandler: function(form) {
+            document.querySelector.post("send.php", document.querySelector("#form-send-message").serialize(), function() {
+                document.querySelector("#form-send-message").each(function() {
+                    this.reset();
+                    document.querySelector("#form-send-message").toggle("blind", 1500);
+                    document.querySelector("#message-sent-ok").toggle("blind", 1500);
+                });
+            });
+        }
+    });
     const scrollto = (el) => {
         let header = select('#header')
         let offset = header.offsetHeight

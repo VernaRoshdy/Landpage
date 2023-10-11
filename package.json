@@ -24,6 +24,7 @@
     "angular-ui-swiper": "^2.3.8",
     "aos": "^2.3.4",
     "boxicons": "^2.1.4",
+    "emailjs": "^4.0.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

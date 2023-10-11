@@ -1536,6 +1536,34 @@ section {
     }
 }
 
+[dir="rtl"] .selectLang {
+    margin: 3px 18px 0px 0.8rem;
+    background: center;
+    border-radius: none;
+    padding: 1px 10px;
+    display: ruby;
+    border: 1px solid #efebeb;
+}
+
+[dir="ltr"] .selectLang {
+    margin: 6px 36px 0px 0.8rem;
+    background: center;
+    border-radius: none;
+    padding: 1px 10px;
+    display: ruby;
+    border: 1px solid #efebeb;
+}
+
+[dir="rtl"] .selectLangicon {
+    width: 7%;
+    margin: 0rem -3.5rem;
+}
+
+[dir="ltr"] .selectLangicon {
+    width: 7%;
+    margin: 0rem -1.5rem;
+}
+
 
 /*--------------------------------------------------------------
   # Footer
@@ -1773,12 +1801,12 @@ section {
         flex-direction: column;
         margin-left: -17rem;
         padding-left: 18rem;
-        transition: transform 0.5s ease-in-out;
-        box-shadow: 5px 0px 10px 0px #aaa;
+        transition: transform .5s ease-in-out;
+        box-shadow: 5px 0 10px #aaa;
         overflow: scroll;
-        padding-right: 6rem;
+        padding-right: 4rem;
         margin-bottom: 31rem;
-        padding-bottom: 21rem;
+        padding-bottom: 18rem;
         text-align: center;
         margin-right: 14px;
     }
@@ -1796,7 +1824,7 @@ section {
         overflow: scroll;
         padding-right: 14rem;
         margin-bottom: 31rem;
-        padding-bottom: 20rem;
+        padding-bottom: 18rem;
     }
     .navbar .menu-items li {
         margin-bottom: 1.8rem;

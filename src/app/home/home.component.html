@@ -27,7 +27,7 @@
                       </select>
                             <img src="../../assets/img/lang.png" class="selectLangicon">
                         </div>
-                        <li><a class="nav-link scrollto" routerLink="/content" fragment="contact">{{ 'Contact'|translate}}</a></li>
+                        <li><a class="nav-link scrollto" routerLink="/content" fragment="contact" [class.active]="(activeFragment | async)==='contact'">{{ 'Contact'|translate}}</a></li>
                         <li><a class="nav-link scrollto" [routerLink]="['/Careers']" target="_blank">{{ 'Career'|translate}}</a></li>
                         <li><a class="nav-link scrollto" routerLink="/content" fragment="pricing">{{ 'Pricing'|translate}}</a></li>
 
@@ -35,7 +35,7 @@
                         <!-- <li><a class="nav-link module" routerLink="/content" fragment="features">{{ 'Features'|translate}}</a></li> -->
                         <li><a class="nav-link module" routerLink="/content" fragment="about" (click)="forceNavigate('about')">{{ 'About'|translate}}</a></li>
 
-                        <li><a class="nav-link scrollto active" routerLink="/content" fragment="Home" (click)="forceNavigate('Home')">{{ 'Home'|translate}}</a></li>
+                        <li><a class="nav-link scrollto " routerLink="/content" fragment="Home" (click)="forceNavigate('Home')">{{ 'Home'|translate}}</a></li>
 
 
 
@@ -59,7 +59,7 @@
                         <h1>{{'Simply_load_and_deliver_your_stuff, goods, Furniture …..and_more_by_'|translate}} <span>{{'TWSILA'|translate}}</span></h1>
                         <h2>{{'Small_or_Big, Near_or_Far_Twsila_makes_every_move_effortless'|translate}}</h2>
                         <div class="text-center text-lg-start">
-                            <a [routerLink]="['./content']" fragment="about" class="btn-get-started scrollto">{{"Get_Started"|translate}}</a>
+                            <a [routerLink]="['/content']" fragment="contact" class="btn-get-started scrollto">{{"Get_Started"|translate}}</a>
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
 
                     <div class="icon-boxes d-flex flex-column align-items-stretch  py-5 px-lg-5" data-aos="fade-left">
                         <h3>{{"TWSILA_is_a_Saudi_Application"|translate}}</h3>
-                        <p>{{'targeting_the_global_market_specialized_in_transporting_People, Goods, Furniture, Cars, Water,…….and_more.'|translate}}</p>
+                        <p>{{'targeting_the_global_market_specialized_in_transporting_People, Goods, Furniture, Cars, Water,…….and_more.'|translate |titlecase}}</p>
 
 
                         <!-- <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
@@ -362,56 +362,56 @@
                 </div>
 
                 <div class="row g-0" data-aos="fade-left">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                            <a href="../../assets/img/gallery/app3.jpg" class="gallery-lightbox" target="_blank">
+                                <img src="../../assets/img/gallery/app3.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                            <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
-                                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                            <a href="../../assets/img/gallery/app1.jpg" class="gallery-lightbox" target="_blank">
+                                <img src="../../assets/img/gallery/app1.jpg" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
-                            <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
-                                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+                            <a href="../../assets/img/gallery/app2.jpeg" class="gallery-lightbox" target="_blank">
+                                <img src="../../assets/img/gallery/app2.jpeg" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                            <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
-                                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
-                            <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
-                                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+                            <a href="../../assets/img/gallery/app4.jpeg" class="gallery-lightbox" target="_blank">
+                                <img src="../../assets/img/gallery/app4.jpeg" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                            <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox">
-                                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+                            <a href="../../assets/img/gallery/app6.jpeg" class="gallery-lightbox" target="_blank">
+                                <img src="../../assets/img/gallery/app6.jpeg" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-4">
+                    <!-- <div class="col-lg-3 col-md-4">
                         <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350">
                             <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox">
                                 <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
                             </a>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="col-lg-3 col-md-4">
+                    <!-- <div class="col-lg-3 col-md-4">
                         <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
                             <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
                                 <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
@@ -425,7 +425,7 @@
                                 <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
                             </a>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -715,7 +715,7 @@
                                 <textarea class="form-control" name="message" rows="5" [placeholder]="'Message' | translate" required></textarea>
                             </div>
                             <div class="my-3">
-                                <div class="loading">Loading</div>
+                                <!-- <div class="loading">Loading</div> -->
                                 <div class="error-message"></div>
                                 <div class="sent-message">{{"Your_message_has_been_sent_Thank_you!"|translate}}</div>
                             </div>
